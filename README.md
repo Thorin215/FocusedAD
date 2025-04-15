@@ -1,5 +1,5 @@
 # FocusedAD: Character-centric Movie Audio Description
-[![hf_space](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)](https://huggingface.co/spaces/LanguageBind/Video-LLaVA) [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Anonymous8976/FocusedAD-Datasets) 
+![hf_space](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)[![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Anonymous8976/FocusedAD-Datasets) 
 
 
 ## 😮 Highlights
@@ -54,6 +54,7 @@ Basic Dependencies:
 ```bash
 pip install -r requirements.txt
 pip install flash-attn==2.5.8 --no-build-isolation
+pip install facenet-pytorch scikit-learn pandas numpy matplotlib
 ```
 
 ## 💡 Getting started
