@@ -1,5 +1,5 @@
 # FocusedAD: Character-centric Movie Audio Description
-![hf_space](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)[![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Anonymous8976/FocusedAD-Datasets) 
+![hf_space](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg) [![Dataset](https://img.shields.io/badge/Dataset-Hugging_Face-CFAFD4)](https://huggingface.co/datasets/Anonymous8976/FocusedAD-Datasets) 
 
 
 ## 😮 Highlights
@@ -60,10 +60,16 @@ pip install facenet-pytorch scikit-learn pandas numpy matplotlib
 ## 💡 Getting started
 
 ### CLI Inference
+**Step1:** prepare demo data in `demo_data` folder.
+- put `*.mp4` files in `demo_data/video`
+- put `*.jpg`/`*.npy` files in `demo_data/character`
+- put `*.txt` files in `demo_data/text_prior`
+
 **Step2:** download [sam2.1_hiera_large.pt](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt) to `checkpoints`.
 
 ```bash
-python infer.py
+python infer.py -c image # for image input
+python infer.py -c npy # for numpy input
 ```
 
 
