@@ -47,7 +47,7 @@ We compare our method with previous audio description methods  on the MAD-eval-N
 ## 🛠️ Installation
 Basic Dependencies:
 - Python >= 3.8
-- Pytorch >= 2.2.0
+- Pytorch >= 2.5.0
 - CUDA Version >= 11.8
 - transformers == 4.40.0
 - tokenizers == 0.19.1
@@ -55,6 +55,7 @@ Basic Dependencies:
 git clone https://github.com/Thorin215/FocusedAD.git
 cd FocusedAD
 conda create -n focusedad python=3.10
+conda activate focusedad
 bash environment.sh
 ```
 
