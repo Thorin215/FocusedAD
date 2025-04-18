@@ -169,7 +169,7 @@ Data format:
 
 Preparation:
 
-- Stage1: Prepare source movie files, please refer to  [storyboardv2_2_imdb.json](./datsets/train/storyboardv2_2_imdb.json)
+- Stage1: Prepare source movie files, please refer to  [storyboardv2_2_imdb.json](./datasets/train/storyboardv2_2_imdb.json)
 - Stage2: Run `bash scripts/get_traindata.sh` to get movie clips.
 - Stage3: put [json files](https://huggingface.co/datasets/Anonymous8976/FocusedAD-Datasets) into `datasets/train/json`
 
