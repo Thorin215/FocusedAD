@@ -29,7 +29,7 @@ def initialize_models_once():
         device = torch.device("cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu")
         
         # Initialize video understanding model
-        global_model, global_processor, global_tokenizer = model_init("checkpoints/VideoRefer-7B")
+        global_model, global_processor, global_tokenizer = model_init("checkpoints")
         
         # Critical fix: Add tokenizer attribute to all model submodules
         for module in global_model.modules():
