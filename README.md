@@ -52,24 +52,34 @@ Basic Dependencies:
 - transformers == 4.40.0
 - tokenizers == 0.19.1
 ```bash
-pip install -r requirements.txt
-pip install flash-attn==2.5.8 --no-build-isolation
-pip install facenet-pytorch scikit-learn pandas numpy matplotlib
+git clone https://github.com/Thorin215/FocusedAD.git
+cd FocusedAD
+conda create -n focusedad python=3.10
+bash environment.sh
 ```
+
+Install SAM2:
+```
+git clone https://github.com/facebookresearch/sam2.git && cd sam2
+
+SAM2_BUILD_CUDA=0 pip install -e ".[notebooks]"
+```
+Then, download [sam2.1_hiera_large.pt](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt) to `checkpoints` folder.
+
+
 
 ## 💡 Getting started
 
 ### CLI Inference
 **Step1:** prepare demo data in `demo_data` folder.
 - put `*.mp4` files in `demo_data/video`
-- put `*.jpg`/`*.npy` files in `demo_data/character`
+- put `*.png`/`*.npy` files in `demo_data/character/{video name}/`
 - put `*.txt` files in `demo_data/text_prior`
 
-**Step2:** download [sam2.1_hiera_large.pt](https://dl.fbaipublicfiles.com/segment_anything_2/092824/sam2.1_hiera_large.pt) to `checkpoints`.
+**Step2:** inference for generating character-centric audio descriptions.
 
 ```bash
-python infer.py -c image # for image input
-python infer.py -c npy # for numpy input
+python infer.py # for image input
 ```
 
 
